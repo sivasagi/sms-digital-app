@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '_variables.scss';
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$chatbot-theme-primary: mat-palette($chatbot-primary, 500, 300, 700);
+$chatbot-theme-accent: mat-palette($chatbot-accent);
+$chatbot-theme-secondary: mat-palette($chatbot-secondary);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$chatbot-theme: mat-light-theme(
+    $chatbot-theme-primary,
+    $chatbot-theme-accent,
+    $chatbot-theme-secondary
+);
+
+$chatbot-typography: mat-typography-config(
+    $font-family: 'Roboto'
+);
+
+@include angular-material-theme($chatbot-theme);
+@include angular-material-typography($chatbot-typography);
