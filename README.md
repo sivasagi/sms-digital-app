@@ -1,6 +1,21 @@
-# SmsDigitalApp
+# SMS Digital Coding Challenge 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+This is a coding challenge project created using  Angular 6+.
+
+## Installation
+
+git clone https://github.com/sivasagi/sms-digital-app
+
+cd sms-digital-app
+
+
+## Install npm packages
+
+Install the npm packages described in the package.json and verify that it works:
+
+```
+npm install
+```
 
 ## Development server
 
