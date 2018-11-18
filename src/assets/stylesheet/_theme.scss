@@ -5,20 +5,20 @@
 
 // define 3 theme color
 // mat-palette accepts $palette-name, main, lighter and darker variants
-$chatbot-theme-primary: mat-palette($chatbot-primary, 500, 300, 700);
-$chatbot-theme-accent: mat-palette($chatbot-accent);
-$chatbot-theme-secondary: mat-palette($chatbot-secondary);
+$primary-theme: mat-palette($primary, 500, 300, 700);
+$accent-theme: mat-palette($accent);
+$secondary-theme: mat-palette($secondary);
 
 // create theme (use mat-dark-theme for themes with dark backgrounds)
-$chatbot-theme: mat-light-theme(
-    $chatbot-theme-primary,
-    $chatbot-theme-accent,
-    $chatbot-theme-secondary
+$theme: mat-light-theme(
+    $primary-theme,
+    $accent-theme,
+    $secondary-theme
 );
 
-$chatbot-typography: mat-typography-config(
+$typography: mat-typography-config(
     $font-family: 'Roboto'
 );
 
-@include angular-material-theme($chatbot-theme);
-@include angular-material-typography($chatbot-typography);
+@include angular-material-theme($theme);
+@include angular-material-typography($typography);

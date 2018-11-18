@@ -1,6 +1,6 @@
 //variables
 
-$chatbot-primary: (
+$primary: (
     50 : #e5f8f9,
     100 : #beecf0,
     200 : #93e0e7,
@@ -33,7 +33,7 @@ $chatbot-primary: (
     )
 );
 
-$chatbot-accent: (
+$accent: (
     50 : #fef3e8,
     100 : #fce0c5,
     200 : #facb9f,
@@ -66,7 +66,7 @@ $chatbot-accent: (
     )
 );
 
-$chatbot-secondary: (
+$secondary: (
     50 : #e5e8ea,
     100 : #bec5cb,
     200 : #929fa9,
@@ -100,9 +100,9 @@ $chatbot-secondary: (
 );
 
 
-$primary: map-get($chatbot-primary, 500 ); // #27c1ce;
-$accent: map-get($chatbot-accent, 500 );//#f5973f;
-$secondary: map-get($chatbot-secondary, 500 );//#253e53;
+$primary-color: map-get($primary, 500 ); // #27c1ce;
+$accent-color: map-get($accent, 500 );//#f5973f;
+$secondary-color: map-get($secondary, 500 );//#253e53;
 $white: #ffffff;
 
 
