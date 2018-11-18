@@ -1,10 +1,11 @@
 # SMS Digital Coding Challenge 
 
-This is a coding challenge project using  Angular 6+.
+This is a coding challenge project created using  Angular 6+.
 
 ## Installation
 
 git clone https://github.com/sivasagi/sms-digital-app
+
 cd sms-digital-app
 
 
