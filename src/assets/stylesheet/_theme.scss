@@ -1,15 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/theming';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '_variables.scss';
 
-// define 3 theme color
-// mat-palette accepts $palette-name, main, lighter and darker variants
 $primary-theme: mat-palette($primary, 500, 300, 700);
 $accent-theme: mat-palette($accent);
 $secondary-theme: mat-palette($secondary);
 
-// create theme (use mat-dark-theme for themes with dark backgrounds)
 $theme: mat-light-theme(
     $primary-theme,
     $accent-theme,

@@ -1,0 +1,26 @@
+@import '../../../../../assets/stylesheet/_variables.scss';
+.registration-form-container{
+    display: flex;
+    button{
+        margin-top: 20px;
+    }
+    form{
+        margin: auto;
+        margin-top: 10%;
+    }
+}
+.alert-danger{
+    color: $error-message;
+}
+
+/deep/ .mat-form-field.mat-form-field-invalid .mat-form-field-label{
+    color: $error-message;
+}
+  
+/deep/ .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker, /deep/ .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent{
+    color: $error-message;
+}
+  
+/deep/ .mat-form-field.mat-form-field-invalid .mat-form-field-ripple, /deep/ .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent{
+    background-color: $error-message;
+}

@@ -1,3 +1,54 @@
-<p>
-  form works!
-</p>
+<div class="registration-form-container">
+  <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" novalidate>
+    <h2>REGISTER FORM</h2>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Email" type="text" id="email" name="email" class="form-control" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          [(ngModel)]="registrationForm.email" #email="ngModel">
+      </mat-form-field>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors.required">
+          Email is required.
+        </div>
+        <div *ngIf="email.errors.pattern">
+          Enter valid email id.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" id="password" name="password" class="form-control" required minlength="8"
+          [(ngModel)]="registrationForm.password" #password="ngModel">
+      </mat-form-field>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+        <div *ngIf="password.errors.required">
+          Password is required.
+        </div>
+        <div *ngIf="password.errors.minlength">
+          Password should be minimum 8 characters
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <mat-form-field [ngClass]="{'mat-form-field-invalid': (registrationForm.password != registrationForm.confirm_password)}">
+        <input matInput placeholder="Confirm Password" type="password" id="confirm_password" name="confirm_password" class="form-control"
+          required minlength="8" [(ngModel)]="registrationForm.confirm_password" #confirm_password="ngModel">
+      </mat-form-field>
+      <div *ngIf="confirm_password.invalid && (confirm_password.dirty || confirm_password.touched)" class="alert alert-danger">
+        <div *ngIf="confirm_password.errors.required">
+          Confirm Password is required.
+        </div>
+        <div *ngIf="confirm_password.errors.minlength">
+          Confirm password should be minimum 8 characters
+        </div>
+      </div>
+      <div *ngIf="(confirm_password.dirty || confirm_password.touched) && (registrationForm.password != registrationForm.confirm_password)"
+        class="alert alert-danger">
+        <div>
+          Passwords didn't match.
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="registrationForm.invalid || (registrationForm.password != registrationForm.confirm_password)" mat-raised-button color="primary" (click)="onSubmit(registrationForm)">Register</button>
+  </form>
+</div>

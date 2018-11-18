@@ -3,19 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../../material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UtilsService } from './services/utils.service';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
+  providers: [UtilsService],
   declarations: []
 })
 export class SharedModule { }
