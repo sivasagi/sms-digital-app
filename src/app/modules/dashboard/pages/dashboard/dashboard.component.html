@@ -1,0 +1,13 @@
+<div class="dashboard-tabs-container">
+  <div class="list-of-tabs">
+    <mat-tab-group (selectedTabChange)="switchTabs($event)" [(selectedIndex)]="selectedTabNumber">
+      <mat-tab label="Grid">
+      </mat-tab>
+      <mat-tab label="Form">
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<div class="dashboard-router-outlet">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,45 @@
+@import '~@angular/material/theming';
+@import '../../../../../assets/stylesheet/_variables.scss';
+.dashboard-tabs-container{
+    background: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    @include mat-elevation(2);
+}
+
+
+.list-of-tabs{
+    ::ng-deep .mat-tab-header{
+        margin: 0 auto;
+        background: $white;
+        border-bottom: none;
+    }
+    ::ng-deep .mat-tab-label.mat-ripple.mat-tab-label-active{
+        .mat-tab-label-content{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    ::ng-deep .mat-tab-label.mat-ripple{
+        .mat-tab-label-content{
+            font-size: 16px;
+            font-weight: normal;
+            color: $secondary-color;
+        }
+    }
+    ::ng-deep .mat-ink-bar{
+        background: $primary-color;
+    } 
+}
+.dashboard-router-outlet{
+    padding-top: 50px;
+    background: $white;
+}
+@media(max-width: 599px){
+    .list-of-tabs{
+        ::ng-deep .mat-tab-header{
+            margin: initial;
+        }
+    }
+}

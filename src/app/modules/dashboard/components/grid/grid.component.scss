@@ -1,0 +1,111 @@
+@import '../../../../../assets/stylesheet/_variables.scss';
+
+.data-table-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    table{
+        width: 100%;
+    }
+    th.mat-sort-header-sorted {
+    color: black;
+    }
+}
+.filter-section{
+    margin: 15px;
+    div{
+        display: inline-block;
+    }
+    .start-date, .end-date{
+        width: 20%;
+    }
+    .filter-button, .reset-button{
+        width: 10%;
+        button{
+            color: $white;
+        }
+    }
+    .pagination{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .filter-section{
+        .start-date, .end-date{
+            width: 30%;
+        }
+        .filter-button, .reset-button{
+            width: 20%;
+        }
+        .pagination{
+            width: 100%;
+        }
+    }
+    ::ng-deep .mat-paginator-container{
+        justify-content: flex-start !important;
+    }
+}
+
+  @media screen and (max-width: 960px) {
+    .mat-table {
+      border: 0;
+      vertical-align: middle
+    }
+    .mat-row { 
+        flex-direction: column;
+        align-items: start;
+    }
+    .mat-table caption {
+      font-size: 1em;
+    }
+    
+    .mat-table .mat-row {
+      border-bottom: 5px solid #ddd;
+      display: block;
+    }
+    .mat-table .mat-cell {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 1em;
+      text-align: right;
+      font-weight: bold;
+      padding: 20px;
+    }
+    mat-footer-row::after, mat-header-row::after, mat-row::after{
+        display: inline;
+    }
+    .mat-table .mat-cell:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: normal;
+      
+      font-size: .85em;
+    }
+    .mat-table .mat-cell:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .filter-section{
+        .start-date, .end-date{
+            width: 50%;
+        }
+        .filter-button, .reset-button{
+            width: 30%;
+            margin-bottom: 15px;
+        }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .filter-section{
+        .start-date, .end-date{
+            width: 100%;
+        }
+    }
+    ::ng-deep .mat-paginator-range-label{
+        margin: 0px !important
+    }
+  }
